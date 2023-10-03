@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="../CSS/StartPage.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=roboto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 
 <body>
@@ -17,137 +21,137 @@
                 </div>
                 <div class="navbar-languages">
                     <ul>
-                        <li><a href="">Srpski</a></li>
+                        <li class="active-language"><a href="">Srpski</a></li>
                         <li><a href="">English</a></li>
                         <li><a href="">Magyar</a></li>
                     </ul>
                 </div>
             </div>
             <div class="navbar-bottom">
-                <div class="navbar-buttons">  <!-- Here is all of the buttons -->
-                        <a href="">
-                            <div class="navbar-buttons-text">
-                                <p>O NAMA</p>
-                                <small>vizija za uspeh</small>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="navbar-buttons-text">
-                                <p>DVG PROIZVODI</p>
-                                <small>naši proizvodi</small>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="navbar-buttons-text">
-                                <p>BRENDOVI</p>
-                                <small>koje zasupamo</small>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="navbar-buttons-text">
-                                <p>DISTRIBUCIJA</p>
-                                <small>logistika i operativa</small>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="navbar-buttons-text">
-                                <p>SARADNJA</p>
-                                <small>proširenje ponude</small>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="navbar-buttons-text">
-                                <p>NOVOSTI</p>
-                                <small>aktuelnosti</small>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="navbar-buttons-text">
-                                <p>KONTAKT</p>
-                                <small>kontaktirajte nas</small>
-                            </div>
-                        </a>
+                <div class="navbar-bottom-flex">
+                <div class="navbar-bottom-button">
+                    <a href="">
+                        <p>O NAMA</p>
+                        <span>vizija za uspeh</span>
+                    </a>
+                </div>
+                <div class="navbar-bottom-button">       
+                    <a href="">
+                        <p>DVG PROIZVODI</p>
+                        <span>naši proizvodi</span>
+                    </a>
+                </div>
+                <div class="navbar-bottom-button">
+                    <a href="">
+                        <p>BRENDOVI</p>
+                        <span>koje zasupamo</span>
+                    </a>
+                </div>
+                <div class="navbar-bottom-button">
+                    <a href="">
+                        <p>DISTRIBUCIJA</p>
+                        <span>logistika i operativa</span>
+                    </a>
+                </div>
+                <div class="navbar-bottom-button">
+                    <a href="">
+                        <p>SARADNJA</p>
+                        <span>proširenje ponude</span>
+                    </a>
+                </div>
+                <div class="navbar-bottom-button">
+                    <a href="">
+                        <p>NOVOSTI</p>
+                        <span>aktuelnosti</span>
+                    </a>
+                </div>
+                <div class="navbar-bottom-button">
+                    <a href="">
+                        <p>KONTAKT</p>
+                        <span>kontaktirajte nas</span>
+                    </a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
     <!-- SlideShow -->
     <div class="SlideShow"> 
-        <div class="my-Slides">
+        <div style="display: none;" class="my-Slides">
             <img src="../Images/pexels-anna-shvets-3987020.jpg">
         </div>
-        <div class="my-Slides">
+        <div class="my-Slides" style="display: none;">
             <img src="../Images/pexels-canva-studio-3277806.jpg">
         </div>
-        <div class="my-Slides">
+        <div class="my-Slides" style="display: none;">
             <img src="../Images/pexels-cowomen-2041627.jpg">
         </div>
-        <div class="my-Slides">
+        <div class="my-Slides" style="display: none;">
             <img src="../Images/pexels-ivan-samkov-7213192.jpg">
         </div>
         <div class="my-Slides">
             <img src="../Images/pexels-tima-miroshnichenko-5453848.jpg">
         </div>
-
-        <div style="text-align:center" class="SlideShow-buttons">
-            <a class="prev" onclick="">&#10094;</a>
-            <span class="dot" onclick=""></span>
-            <span class="dot" onclick=""></span>
-            <span class="dot" onclick=""></span>
-            <a class="next" onclick="">&#10095;</a>
+        <div class="SlideShow-buttons-flex">
+            <div style="text-align:center" class="SlideShow-buttons">
+                <span class="lnr lnr-chevron-left"></span>
+                <span class="active-dot"><span> </span></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="lnr lnr-chevron-right"></span>
+            </div>
         </div>
     </div>
     <!-- About -->
-    <div class="About-div">
+    <div class="About">
         <div class="About-Left">
             <img src="../Images/Rectangle 124.png">
         </div>
         <div class="About-Right">
-            <div class="About-Right-Top">
+            <div class="About-Right-Text">
                 <h1>DVG Company</h1>
                 <p>Veleprodaja i maloprodaja kozmetike i kućne hemije</p>
+                <hr>
+                <div class="About-Right-Bottom">
+                    <span class="About-Right-Small">
+                        <p>DVG Company d.o.o. je trgovinsko preduzeće osnovano 2008. 
+                            godine u Subotici. Prvenstvena delatnost kompanije je veleprodaja kozmetike i kućne hemije.
+                            U potpunosti je u privatnom vlasništvu, sa sedištem u Subotici.
+                            Tu se nalazi distrubutivni centar i poslovne prostorije, sa ukupno 3000m2 magacinskog prostora koji zadovoljava sve segmente u pogledu smeštaja, 
+                            čuvanja i plasiranja robe.
+                        </p>
+                    </span>
+                <br>
+                <button type="button">
+                    Saznajte više o nama
+                </button>
             </div>
-            <hr>
-            <div class="About-Right-Bottom">
-                <div>
-                    <small>
-                        DVG Company d.o.o. je trgovinsko preduzeće osnovano 2008. godine u Subotici.
-                        Prvenstvena delatnost kompanije je veleprodaja kozmetike i kućne hemije.
-                        U potpunosti je u privatnom vlasništvu, sa sedištem u Subotici.
-                        Tu se nalazi distrubutivni centar i poslovne prostorije,
-                        sa ukupno 3000m2 magacinskog prostora koji zadovoljava sve segmente u pogledu smeštaja,
-                        čuvanja i plasiranja robe.
-                    </small>
-                </div>
-                <div>
-                    <button type="button">
-                        Saznajte više o nama
-                    </button>
-                </div>
             </div>
         </div>
     </div>
     <!--Image with text -->
     <div class="Container">
-        <h1>POUZDANA DISTRIBUCIJA</h1>
-        
+        <div class="Container-Text">
+            <h1>POUZDANA DISTRIBUCIJA</h1>
+        </div>
     </div>
      <!-- Activity -->
     <div class="Activity">
             <div class="Activity-Card">
                 <img src="../Images/ActivityImages/Rectangle 128.png">
                 <p>Postanite naš partner</p>
-                <hr>
+                
             </div>
             <div class="Activity-Card">
                 <img src="../Images/ActivityImages/Rectangle 129.png">
                 <p>Postanite naš partner</p>
-                <hr>
+                
             </div>
-            <div class="Activity-Card">
+            <div class="Activity-Card Activity-Card-Border">
                 <img src="../Images/ActivityImages/Rectangle 130.png">
                 <p>Postanite naš partner</p>
-                <hr>
+                
             </div>  
     </div>
     <!-- DVG Company u borjkama-->
@@ -169,7 +173,7 @@
                 <h2>8</h2>
                 <p>Komercijalista</p>
             </div>
-            <div class="DVG-Numbers">
+            <div class="DVG-Numbers last-Number">
                 <h2>170</h2>
                 <p>Brendova</p>
             </div>
@@ -177,95 +181,81 @@
     </div>
     <!-- Products-->
     <div class="Products">
-        <div class="Products-Top">
-            <p>Naši proizvodi</p>
-            <hr>
-            <small>
-                Naše proizvode DVG Cosmetics odlikuje visok kvalitet kojim se dobija kompletna nega lica I tela. 
-                Uspeli smo da uskladimo kvalitet i cenu,
-                što su prepoznali i našI kupci.
-            </small>
-        </div>
-        <div class="Products-Bottom">
-            <div class="Product-Card">
-                <img src="../Images/ProductImages/ 136.png">
-                <p>Postanite naš partner</p>
-                
+        <div class="Products-inner">
+            <div class="Products-Top">
+                <p>Naši proizvodi</p>
+                <hr>
+                <span class="Products-Top-UnderText">
+                    <p >
+                        Naše proizvode DVG Cosmetics odlikuje visok kvalitet kojim se dobija kompletna nega lica I tela. 
+                        Uspeli smo da uskladimo kvalitet i cenu,
+                        što su prepoznali i našI kupci.
+                    </p>
+                </span>
             </div>
-            <div class="Product-Card">
-                <img src="../Images/ProductImages/Rectangle 137.png">
-                <p>Postanite naš partner</p>
-                
-            </div>
-            <div class="Product-Card">
-                <img src="../Images/ProductImages/Rectangle 138.png">
-                <p>Postanite naš partner</p>
-                
-            </div>
-            <div class="Product-Card">
-                <img src="../Images/ProductImages/Rectangle 139.png">
-                <p>Postanite naš partner</p>
-                
-            </div>
-            <div class="Product-Card">
-                <img src="../Images/ProductImages/Rectangle 141.png">
-                <p>Postanite naš partner</p>
-                
+            <div class="Products-Bottom">
+                <div class="Product-Card">
+                    <img src="../Images/ProductImages/Rectangle 136.png">
+                    <p>KESE I FOLIJE</p>
+                    
+                </div>
+                <div class="Product-Card">
+                    <img src="../Images/ProductImages/Rectangle 137.png">
+                    <p>ZA KUHINJU</p>
+                    
+                </div>
+                <div class="Product-Card">
+                    <img src="../Images/ProductImages/Rectangle 138.png">
+                    <p>Ubrusi i toalet papiri</p>
+                    
+                </div>
+                <div class="Product-Card">
+                    <img src="../Images/ProductImages/Rectangle 139.png">
+                    <p>KOZMETIKA</p>
+                    
+                </div>
+                <div class="Product-Card">
+                    <img src="../Images/ProductImages/Rectangle 141.png">
+                    <p>PlastiČne Kante</p>
+                    
+                </div>
             </div>
         </div>
     </div>
     <!--Brands   -->
     <div class="Brands">
-        <h3>Istaknuti brendovi za koje radimo distribuciju</h3>
-        <hr>
+        <span class="Brands-Logo">
+            <img src="../Images/Brands/Group 105.png">
+        </span>
+        <div>
+            <h1>Istaknuti brendovi za koje radimo distribuciju</h1>
+            <hr>
+        </div>
         <div class="Brand-Names">
             <div class="Brand">
-                <div class="Brand-Top">
                     <img src="../Images/Brands/logoi-04.png" >
-                </div>
-                <div class="Brand-Bottom">
-                    <small>Dove</small>
-                </div>
+                    <p>Dove</p>
             </div>
             <div class="Brand">
-                <div class="Brand-Top">
                     <img src="../Images/Brands/logoi-03.png" >
-                </div>
-                <div class="Brand-Bottom">
-                    <small>Nivea</small>
-                </div>
+                    <p>Nivea</p> 
             </div>
             <div class="Brand">
-                <div class="Brand-Top">
                     <img src="../Images/Brands/logoi-05.png" >
-                </div>
-                <div class="Brand-Bottom">
-                    <small>Palmolive</small>
-                </div>
+                    <p>Palmolive</p>
             </div>
             <div class="Brand">
-                <div class="Brand-Top">
                     <img src="../Images/Brands/logoi-01.png" >
+                    <p>Vanish</p>
                 </div>
-                <div class="Brand-Bottom">
-                    <small>Vanish</small>
-                </div>
-            </div>
-            <div class="Brand">
-                <div class="Brand-Top">
+
+            <div class="Brand">         
                     <img src="../Images/Brands/logoi-02.png" >
-                </div>
-                <div class="Brand-Bottom">
-                    <small>Ajax</small>
-                </div>
+                    <p>Ajax</p>
             </div>
-            <div class="Brand">
-                <div class="Brand-Top">
-                    <img src="../Images/Brands/logoi-06.png" >
-                </div>
-                <div class="Brand-Bottom">
-                    <small>Cif</small>
-                </div>
+            <div class="Brand">         
+                    <img src="../Images/Brands/logoi-06.png" >                
+                    <p>Cif</p>
             </div>
         </div>
         <button type="button">
@@ -275,33 +265,61 @@
     <!-- Footer-->
     <footer>
         <div class="Footer-Top">
-            <div class="Footer-Logo">
+            <div class="Footer-Logo Footer-top-place">
                 <img src="../Images/Footer/Frame.png">
             </div>
-            <div class="Footer-Contact">
-                <a href="#">
-                    Čantavirski put bb<br>
-                    24000 Subotica, Srbija
-                </a>
-                <a href="tel:+381 24 568 555">
-                    +381 24 568 555
-                </a>
-                <a href="mailto: office@dvgcomapny.com">
-                    office@dvgcomapny.com
-                </a>
+            <div class="Footer-Contact Footer-top-place">
+                <h1>D.V.G. COMPANY</h1>
+                <span class="Contact">
+                    <div>
+                        <span><img src="../Images//Footer/Location.png"></span>
+                    </div>
+                    <div>
+                        <a href="#" style="text-decoration: none;">
+                            Čantavirski put bb<br>
+                            24000 Subotica, Srbija
+                        </a>
+                    </div>
+                </span>
+                <span class="Contact">
+                    <div>
+                        <span><img src="../Images//Footer/Vector.png"></span>
+                    </div>
+                    <div>
+                        <a href="tel:+381 24 568 555">
+                            +381 24 568 555
+                        </a>
+                    </div>
+                </span>
+                <span class="Contact">
+                    <div>
+                        <span><img src="../Images//Footer/Phone.png"></span>
+                    </div>
+                    <div>
+                        <a href="mailto: office@dvgcomapny.com">
+                            office@dvgcomapny.com
+                        </a>
+                    </div>
+                </span>
             </div>
-            <div class="Footer-Links">
-                <a href="#"> NAMA</a>
-                <a href="#">>DVG PROIZVODI</a>
+            <div class="Footer-Links Footer-top-place">
+                <a href="#"> NAMA </a>
+                <a href="#"> DVG PROIZVODI</a>
                 <a href="#">BRENDOVI</a>
-                <a href="#">>DISTRIBUCIJA</a>
+                <a href="#">DISTRIBUCIJA</a>
                 <a href="#">SARADNJA</a>
                 <a href="#">NOVOSTI</a>
                 <a href="#">KONTAKT</a>
             </div>
-            <div class="Footer-Social">
+            <div class="Footer-Social Footer-top-place">
                 <div>
                     <p>pratite nas:</p>
+                </div>
+                <div>
+                    <span><a href=""><img src="../Images/Footer/Social/Frame (3).png"></a></span>
+                    <span><a href=""><img src="../Images/Footer/Social/Frame (4).png"></a></span>
+                    <span><a href=""><img src="../Images/Footer/Social/Frame (5).png"></a></span>
+                    <span><a href=""><img src="../Images/Footer/Social/Frame (6).png"></a></span>
                 </div>
             </div>           
         </div>
