@@ -1,7 +1,17 @@
 $navColor:#D9D9D9;
 $navbarBorder:#888787;
-body{
-    overflow-x: hidden;
+$fontSizeBase: 16px;
+$fontSizeSmall: 14px;
+$fontSizeMedium: 18px;
+$fontSizeLarge: 24px;
+$fontSizeExtraLarge: 28px;
+$fontSizeHeading1: 42px;
+$fontSizeHeading2: 46px;
+html,body {
+  height:100%;
+  min-height:100%;
+  max-height:100%;
+  overflow-x: hidden;
     margin:0px;
 }
 .navbar{
@@ -27,6 +37,7 @@ body{
     display: inline-block;
 }
 .navbar-languages a{
+    margin-left: 15px;
     color: #595959;
     font-family: Roboto;
     font-size: 0.8750em;
@@ -65,9 +76,25 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-left: 0.5px solid rgba(136, 135, 135, 0.40);;
-    border-right: 0.5px solid rgba(136, 135, 135, 0.40);;
+    border-left: 0.5px solid rgba(136, 135, 135, 0.40);
+    border-right: 0.5px solid rgba(136, 135, 135, 0.40);
+    position: relative;
   }
+  .navbar-bottom-button::after{
+    content:"";
+    display: block;
+    width: 0;
+    height: 6px;  
+    background: #BF0F0F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-top: 22px;
+  }
+ .navbar-bottom-button:hover::after{
+    width: 100%;
+    transition: 0.5s;
+ }
   
   .navbar-bottom-button a {
     text-decoration: none;
@@ -165,6 +192,7 @@ body{
 
 .About{
   min-height: 647px;
+  height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -174,20 +202,21 @@ body{
 
 .About-Right{
   width: 100%;
-  height: 100%;
+  max-height: 100%;
   margin-top: 70px ;
   margin-bottom: 70px;
+  margin-right: 105px;
 }
 .About-Left{
   width: 100%;
   height: auto;
   margin-top: 70px ;
   margin-bottom: 70px;
+  display: flex;
+  align-items: center;
 }
 .About-Left img{
-  height: 100%;
   width: 100%;
-  max-width: 730px;
 }
 .About-Right h1{
   color: #303030;
@@ -206,10 +235,11 @@ body{
   line-height: 34px;
 }
 .About-Right-Text{
-  height: 100%;
-  max-width: 524px;
-  margin-right:151px ;
+  overflow-y: hidden;
+  margin-right:47px ;
   margin-left:55px ;
+  position: relative;
+  height: 100%;
 }
 .About-Right-Small p{
   color: #474747;
@@ -223,13 +253,12 @@ body{
   content:"";
   display: block;
   width: 137px;
-  height: 6px;  
+  height: 16px;  
   background: #BF0F0F;
   margin-top: 22px;
 }
 .About-Right button{
-  border-radius: 4px;
-  background: var(--Primary, #BF0F0F);
+  background:  #BF0F0F;
   display: inline-flex;
   height: 48px;
   padding: 0px 16px;
@@ -237,12 +266,17 @@ body{
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
-  color: var(--Surface, #FFF);
-
-  
+  color: #FFF;
+  font-family: Roboto;
+  border: 0px;
+}
+.About-Right button:hover{
+  background-color: #000;
+  padding: 15px 32px;
+  transition: 0.5s;
 }
 .About-Right-Bottom{
-  
+  height: fit-content;
   padding: 0px;
   margin: 0px;
   margin-top: 54px;
@@ -290,6 +324,7 @@ body{
   top: 0;
 }
 .Container h1{
+  text-align: center;
   z-index: 12;
   display: flex;
   flex-direction: column;
@@ -298,18 +333,29 @@ body{
 //Activity
 
 .Activity{
-  min-height: 500px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+}
+.Activity-Flex{
   margin-top: 74px;
+    margin-left:105px;
+    margin-right:105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.Activity a{
+  text-decoration: none;
+  width: 100%;
+}
+.Activity a:hover .Activity-Card p::after{
+  width: 100%;
+  transition: 0.5s;
 }
 .Activity-Card{
   display: flex;
   flex-direction: column;
-  min-width: 400px;
+  text-decoration: none;
 }
 .Activity-Card p
 {
@@ -319,7 +365,9 @@ body{
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+  white-space: nowrap;
   text-transform: uppercase;
+  
 }
 .Activity-Card p::after{
   content: "";
@@ -334,9 +382,10 @@ body{
 }
 //DVG-InNumvers
 .DVG-InNumbers{
-  min-height: 500px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
+  margin-top: 161px;
 }
 .DVG-InNumbers-Top{
   display: flex;
@@ -371,12 +420,13 @@ body{
   margin-top: 11px;
 }
 .DVG-InNumbers-Bottom{
-  display: inline-flex;
+  width: 100%;
+  margin-top: 93px;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: url(../Images/Rectangle\ 140.png);
   min-height: 300px;
-  max-width: 100%;
 }
 .DVG-InNumbers-Bottom h2{
   color: #FFF;
@@ -397,8 +447,8 @@ body{
   line-height: 34px;
 }
 .DVG-Numbers{
-    max-height: 306px;
-    min-width: 200px;
+    max-height: 175px;
+    width: 100%;
     text-align: center;
     border-right:1px solid #FFFFFF ;
     padding-left: 20px;
@@ -408,7 +458,7 @@ body{
   border: 0px solid;
 }
 .Products{
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background: #F4F4F4;
@@ -523,9 +573,11 @@ body{
   align-items: center;
   margin-left: 190px;
   margin-right: 190px;
-  gap: 74px; /* Set the default gap to 74px */
+  width: 100%;
+  min-height: 161px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-
 .Brand p{
   color: #474747;
   text-align: center;
@@ -534,8 +586,8 @@ body{
   font-style: normal;
   font-weight: 400;
   line-height: 34px;
-  margin: 0px;
 }
+
 .Brands button{
   background: var(--Primary, #BF0F0F);
   display: inline-flex;
@@ -552,9 +604,10 @@ body{
   border-radius: 4px;
 }
 footer{
-  min-height: 383px;
+  min-height: fit-content;
   background: url("../Images/Footer/White-fur-rug-texture-patternpictures-1313\ 1.png");
   overflow-x: hidden;
+  margin-top: 75px;
 }
 .Footer-Top{
   display: flex;
@@ -568,11 +621,15 @@ footer{
   position: relative;
   display: flex;
   flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.26);
 }
 .Footer-Logo img{
   position: absolute;
   right: 0;
   margin-right: 70px;
+}
+.Footer-Contact{
+  margin-left: 47px;
 }
 .Footer-Contact h1{
   color: #FFF;
@@ -590,6 +647,7 @@ footer{
 }
 .Footer-Links{
   justify-content: center;
+  margin-left: 19px;
 }
 .Footer-Links a{
   color: #FFF;
@@ -609,6 +667,7 @@ footer{
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
+  margin-left: 16px;
 }
 .Contact img{
   margin-right: 14px;
@@ -617,38 +676,153 @@ footer{
   display: inline-flex;
   flex-direction: row;
 }
-//Medias
-@media screen and (max-width: 1120px)   
+.Footer-Bottom
 {
+  height: 100%;
+  min-height: 68px;
+  background: rgba(0, 0, 0, 0.33);  
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.Footer-Copyright{
+  height: 100%;
+  margin-left:65px ;
+  width: 100%;
+  text-align: left;
+}
+.Footer-Powered
+{
+  width: 100%;
+  margin-right: 25px;
+  text-align: right;
+}
+.Footer-Personal{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.Footer-Bottom small{
+  color: rgba(255, 255, 255, 0.30);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 137.99%; /* 19.319px */
+  letter-spacing: 0.42px;
+}
+.Footer-Bottom a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.50);
+  text-align: right;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 137.99%;
+  letter-spacing: 0.42px;
+  text-decoration-line: underline;
+}
+
+//Medias
+
+
+@media only screen and (min-width: 320px) and (max-width:767px) {
   .About{
     flex-direction: column;
-    max-height: fit-content;
   }
-  .About-Right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .About-Left{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-}
-@media screen and (max-width: 1360px)   
-{
-  .Products-Bottom{
-   flex-wrap: wrap;
-  }
-  .Product-Card{
-    margin-top: 20px;
-
-  }
-  .Brand-Names{
-    gap: 0px;
-  }
-  .Activity{
+  .Activity-Flex{
     flex-direction: column;
   }
+  
+  .Activity-Card p{
+    white-space: wrap;
+    font-size: 16px;
+  }
+  .DVG-InNumbers{
+    margin-top: 80px;
+  }
+  .DVG-Numbers h2{
+    font-size: 15px;
+  }
+  .DVG-InNumbers p{
+    font-size: 12px;
+  }
+  .Footer-Top{
+    flex-direction: column;
+  }
+  .Footer-Bottom{
+    flex-direction: column;
+  }
+  .Footer-top-place{
+    margin: 0px;
+    text-align: center;
+    min-height: fit-content;
+  }
+  .Footer-Logo img{
+    position: unset;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+  }
+  .Footer-Logo{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Footer-top-place a{
+    text-align: center;
+  }
+  .Contact{
+    justify-content: center;
+  }
+  .Footer-Contact{
+    gap: 0.5em;
+  }
+  .Footer-Links{
+    gap: 0.5em;
+  }
+  .Footer-Bottom{
+    gap: 0.5em;
+  }
+  .Footer-Copyright{
+    text-align: center;
+    margin: 0px;
+  }
+  .Footer-Powered{
+    text-align: center;
+    margin: 0px;
+  }
+  footer{
+    background: url("../Images/Footer/White-fur-rug-texture-patternpictures-1313\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+   }
+}
+@media only screen and (min-width: 768px) and (max-width:991px)  {
+  .About{
+    flex-direction: column;
+  }
+  .Activity-Flex{
+    flex-direction: column;
+  }
+  .Footer-Top{
+    flex-direction: column;
+  }
+  .Footer-Bottom{
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width:1279px) {
+  
+}
+@media only screen and (min-width: 1280px)  {
+   
 }
