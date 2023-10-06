@@ -6,6 +6,28 @@ html, body {
   margin: 0px;
 }
 
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .navbar {
   display: flex;
   flex-direction: column;
@@ -62,13 +84,14 @@ html, body {
 .navbar-bottom {
   margin-left: 105px;
   margin-right: 105px;
+  height: 62px;
 }
 
 .navbar-bottom-flex {
-  height: 62px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .navbar-bottom-button {
@@ -82,21 +105,12 @@ html, body {
   position: relative;
 }
 
-.navbar-bottom-button::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 6px;
+.navbar-bottom-button:hover {
   background: #BF0F0F;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-top: 22px;
-}
-
-.navbar-bottom-button:hover::after {
-  width: 100%;
   transition: 0.5s;
+}
+.navbar-bottom-button:hover p, .navbar-bottom-button:hover span {
+  color: white;
 }
 
 .navbar-bottom-button a {
@@ -132,16 +146,91 @@ html, body {
   line-height: 14px;
 }
 
+.hamburger-line {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.hamburger {
+  margin-left: 20px;
+  display: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  float: left;
+  cursor: pointer;
+}
+
+.active-hamburger {
+  position: absolute;
+  left: 0;
+  z-index: 120;
+  background-color: #D9D9D9;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  animation-fill-mode: "forward";
+}
+
+.nav-exit {
+  display: none;
+  width: 100%;
+  margin-right: 30px;
+  text-align: right;
+  cursor: pointer;
+}
+
+@keyframes fade_in {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes fade_out {
+  0% {
+    left: 0;
+    visibility: 100%;
+  }
+  100% {
+    left: -200px;
+    visibility: 0;
+  }
+}
+.active-hamburger-button {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .SlideShow {
-  max-height: 705px;
+  min-height: 600px;
+  height: 70vh;
+  width: 100%;
   position: relative;
 }
 
 .SlideShow img {
-  max-height: 705px;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.my-Slides {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  visibility: hidden;
+}
+
+.active-myslide {
+  visibility: visible;
 }
 
 .dot {
@@ -154,8 +243,8 @@ html, body {
 }
 
 .active-dot {
-  height: 11px;
-  width: 11px;
+  height: 12px;
+  width: 12px;
   border: 3px solid #FFF;
   background-color: #A62120;
   border-radius: 50%;
@@ -185,6 +274,7 @@ html, body {
   line-height: normal;
   border: 1px solid #FFF;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .lnr-chevron-right {
@@ -195,6 +285,7 @@ html, body {
   line-height: normal;
   border: 1px solid #FFF;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .About {
@@ -403,10 +494,6 @@ html, body {
   margin-top: 11px;
 }
 
-.Activity-Card-Border img {
-  border-bottom: 12px solid #BF0F0F;
-}
-
 .DVG-InNumbers {
   height: -moz-fit-content;
   height: fit-content;
@@ -482,12 +569,16 @@ html, body {
 }
 
 .DVG-Numbers {
-  max-height: 175px;
+  min-height: 152px;
   width: 100%;
   text-align: center;
   border-right: 1px solid #FFFFFF;
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .last-Number {
@@ -495,17 +586,9 @@ html, body {
 }
 
 .Products {
-  display: none;
-  align-items: center;
-  justify-content: center;
   background: #F4F4F4;
-}
-
-.Products-inner {
-  min-height: 300px;
-  min-width: 600px;
-  margin: 110px 90px;
-  width: 100%;
+  height: 100%;
+  padding: 110px 90px;
 }
 
 .Products-Top {
@@ -545,32 +628,92 @@ html, body {
 .Products-Bottom {
   width: 100%;
   display: flex; /* Arrange children in a row */
-  justify-content: space-between; /* Distribute space between children */
+  justify-content: center; /* Distribute space between children */
   align-items: center;
 }
 
-.Product-Card {
+.slider {
+  width: 100%;
+  height: 414px;
   display: flex;
-  flex-direction: column;
-  max-width: 232px;
-  max-height: 333px;
-  background: #FFFFFF;
+  gap: 15px;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
 }
 
-.Product-Card p {
+.slides-side {
+  width: 80%;
+}
+
+.slides {
+  display: none;
+}
+
+.slides-left {
+  position: absolute;
+  top: 50%;
+  color: #000;
+  border: #000 solid 1px;
+  z-index: 30;
+  left: 0;
+}
+
+.slides-right {
+  right: 0;
+  position: absolute;
+  top: 50%;
+  color: #000;
+  border: #000 solid 1px;
+  z-index: 30;
+}
+
+.slides-center {
+  background-color: #474747;
+  width: 100%;
+  height: 100%;
+  visibility: 100%;
+  position: relative;
+  order: 0;
+}
+
+.slides-right-place {
+  order: 1;
+}
+
+.slides-left-place {
+  order: -1;
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card {
+  background-color: #FFFFFF;
+  height: 100%;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+/* Style the main container */
+.container p {
   color: #474747;
   font-family: Roboto;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px; /* 91.667% */
+  line-height: 22px;
   text-transform: uppercase;
-  margin-bottom: 64px;
-  margin-top: 0px;
   margin-left: 25px;
 }
 
-.Product-Card p::after {
+.container p::after {
   content: "";
   display: block;
   width: 53.211px;
@@ -579,11 +722,11 @@ html, body {
   margin-top: 11px;
 }
 
-.Product-Card img {
-  min-width: 247px;
-  max-height: 247px;
-  -o-object-fit: contain;
-     object-fit: contain;
+.slides-top img {
+  max-width: 100%; /* Ensure the image scales proportionally */
+  height: auto; /* Maintain the image's aspect ratio */
+  display: block; /* Remove any extra spacing below the image */
+  margin: 0 auto; /* Center the image horizontally */
 }
 
 .Brands {
@@ -599,7 +742,7 @@ html, body {
   left: 0;
   width: 129.739px;
   height: 120.391px;
-  top: -92px;
+  top: -30px;
 }
 
 .Brands h1 {
@@ -629,6 +772,7 @@ html, body {
 }
 
 .Brand p {
+  height: 100%;
   color: #474747;
   text-align: center;
   font-family: Inter;
@@ -720,6 +864,14 @@ footer {
   line-height: 26px;
 }
 
+.Footer-Links a:hover {
+  text-decoration: underline;
+}
+
+.Contact a:hover {
+  text-decoration: none;
+}
+
 .Footer-Social {
   color: #FFF;
   text-align: left;
@@ -729,6 +881,12 @@ footer {
   font-weight: 400;
   line-height: 26px;
   margin-left: 16px;
+  cursor: pointer;
+}
+
+.Footer-Social span svg:hover {
+  transform: scale(1.5);
+  transition: 1s;
 }
 
 .Contact img {
@@ -755,6 +913,7 @@ footer {
   margin-left: 65px;
   width: 100%;
   text-align: left;
+  white-space: nowrap;
 }
 
 .Footer-Powered {
@@ -796,6 +955,9 @@ footer {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
   .About {
     flex-direction: column;
   }
@@ -811,12 +973,15 @@ footer {
   }
   .DVG-Numbers h2 {
     font-size: 15px;
+    margin: 0px;
   }
   .DVG-InNumbers p {
     font-size: 12px;
+    margin: 0px;
   }
   .Footer-Top {
     flex-direction: column;
+    gap: 10px;
   }
   .Footer-Bottom {
     flex-direction: column;
@@ -868,6 +1033,18 @@ footer {
     background-repeat: no-repeat;
     background-position: center center;
   }
+  .navbar-bottom-flex {
+    visibility: hidden;
+  }
+  .navbar-bottom {
+    margin: 0px;
+  }
+  .navbar-logo {
+    margin: 0px;
+  }
+  .navbar-languages {
+    margin: 0px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .About {
@@ -880,6 +1057,14 @@ footer {
     flex-direction: column;
   }
   .Footer-Bottom {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .About-Right-Text {
+    display: flex;
+    align-items: start;
+    justify-content: center;
     flex-direction: column;
   }
 }/*# sourceMappingURL=StartPage.css.map */
