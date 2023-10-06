@@ -5,13 +5,18 @@
     <title>first project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/StartPage.css">
+    <link rel="stylesheet" href="../CSS/responsivnes.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=roboto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 </head>
 <body>
+    <div id="overlay">
     <!-- Navbar -->
     <header>
         <div class="navbar">
@@ -24,8 +29,10 @@
                         <li class="active-language"><a href="">Srpski</a></li>
                         <li><a href="">English</a></li>
                         <li><a href="">Magyar</a></li>
+                        <li><span class="lnr lnr-sun" id="light"></span></li>
                     </ul>
                 </div>
+                
             </div>
             <div class="navbar-bottom">
                 <div class="hamburger" onclick="hamburger" id="hamburger">
@@ -40,43 +47,43 @@
                 <div class="navbar-bottom-button" id="navbar-bottom-button">
                     <a href="">
                         <p>O NAMA</p>
-                        <span>vizija za uspeh</span>
+                        <small>vizija za uspeh</small>
                     </a>
                 </div>
                 <div class="navbar-bottom-button">       
                     <a href="">
                         <p>DVG PROIZVODI</p>
-                        <span>naši proizvodi</span>
+                        <small>naši proizvodi</small>
                     </a>
                 </div>
                 <div class="navbar-bottom-button">
                     <a href="">
                         <p>BRENDOVI</p>
-                        <span>koje zasupamo</span>
+                        <small>koje zasupamo</small>
                     </a>
                 </div>
                 <div class="navbar-bottom-button">
                     <a href="">
                         <p>DISTRIBUCIJA</p>
-                        <span>logistika i operativa</span>
+                        <small>logistika i operativa</small>
                     </a>
                 </div>
                 <div class="navbar-bottom-button">
                     <a href="">
                         <p>SARADNJA</p>
-                        <span>proširenje ponude</span>
+                        <small>proširenje ponude</small>
                     </a>
                 </div>
                 <div class="navbar-bottom-button">
                     <a href="">
                         <p>NOVOSTI</p>
-                        <span>aktuelnosti</span>
+                        <small>aktuelnosti</small>
                     </a>
                 </div>
                 <div class="navbar-bottom-button">
                     <a href="">
                         <p>KONTAKT</p>
-                        <span>kontaktirajte nas</span>
+                        <small>kontaktirajte nas</small>
                     </a>
                     </div>
                 </div>
@@ -119,7 +126,7 @@
         </div>
         <div class="About-Right">
             <div class="About-Right-Text">
-                <h1>DVG Company</h1>
+                <h1 id="About">DVG Company</h1>
                 <p>Veleprodaja i maloprodaja kozmetike i kućne hemije</p>
                 <hr>
                 <div class="About-Right-Bottom">
@@ -173,7 +180,7 @@
     <!-- DVG Company u borjkama-->
     <div class="DVG-InNumbers">
         <div class="DVG-InNumbers-Top">
-            <h1>DVG Company</h1>
+            <h1 id="DVGCompany">DVG Company</h1>
             <p>u brojkama</p>
         </div>
         <div class="DVG-InNumbers-Bottom">
@@ -259,7 +266,11 @@
     <!--Brands   -->
     <div class="Brands">
         <span class="Brands-Logo">
-            <img src="../Images/Brands/Group 105.png">
+            <svg xmlns="http://www.w3.org/2000/svg" width="130" height="121" viewBox="0 0 130 121" fill="none">
+                <path d="M7.31897 0.609375C4.8092 13.4911 14.8483 26.3728 26.6801 30.7894C38.5118 35.206 52.1363 33.3657 64.6851 30.7894C77.234 28.213 90.1414 25.2686 103.049 27.4769C115.956 29.6852 128.146 39.2545 129.581 52.1362C131.015 63.9138 122.41 74.5872 115.598 83.7884C122.051 76.4274 118.466 62.4416 111.654 55.4486C104.841 48.4557 94.0853 46.9835 84.7633 48.0877C75.4413 49.1918 41.7387 57.6569 24.5288 46.6155C3.37504 33.3657 4.8092 11.2828 7.31897 0.609375Z" fill="white"/>
+                <path d="M0.395179 24.6864C-1.75337 34.2604 12.5703 69.6107 70.2232 64.0872C114.269 60.0367 96.722 96.4917 91.3506 103.488C96.0058 97.9646 98.1544 76.9754 68.7908 79.9212C0.0370873 86.5494 -1.39528 32.4193 0.395179 24.6864Z" fill="white"/>
+                <path d="M3.76156 59.7101C4.47994 63.4023 20.2842 94.7858 60.5133 91.0936C92.1218 88.1399 78.1135 116.939 75.24 121C78.1135 117.677 70.9297 105.862 57.999 105.862C17.4107 105.862 2.68399 64.1407 3.76156 59.7101Z" fill="white"/>
+                </svg>
         </span>
         <div>
             <h1>Istaknuti brendovi za koje radimo distribuciju</h1>
@@ -302,7 +313,7 @@
                 <img src="../Images/Footer/Frame.png">
             </div>
             <div class="Footer-Contact Footer-top-place">
-                <h1>D.V.G. COMPANY</h1>
+                <h1 id="DVG_section">D.V.G. COMPANY</h1>
                 <span class="Contact">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -346,11 +357,11 @@
                 </span>
             </div>
             <div class="Footer-Links Footer-top-place">
-                <a href="#"> NAMA </a>
-                <a href="#"> DVG PROIZVODI</a>
+                <a href="#About"> NAMA </a>
+                <a href="#Products"> DVG PROIZVODI</a>
                 <a href="#">BRENDOVI</a>
                 <a href="#">DISTRIBUCIJA</a>
-                <a href="#">SARADNJA</a>
+                <a href="#Brands">SARADNJA</a>
                 <a href="#">NOVOSTI</a>
                 <a href="#">KONTAKT</a>
             </div>
@@ -428,6 +439,13 @@
             </div>
         </div>
     </footer>
+</div>
+    <div class="popup" id="popup">
+        <h1>This is popup</h1>
+        <div class="popup-exit" id="popup-exit">
+            <span class="lnr lnr-cross"></span>
+        </div>
+    </div>
 </body>
     <script src="../JavaScript/StartPage.js"></script>
 </html>

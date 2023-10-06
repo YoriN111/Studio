@@ -1,4 +1,26 @@
 document.addEventListener("DOMContentLoaded", function (){
+    //light dark mode
+    const light_button=document.getElementById("light");
+    const text=document.getElementsByClassName("h1");
+    console.log(text.length)
+    light_button.addEventListener("click",function(){
+       document.body.classList.toggle("dark-mode")
+    });
+   
+    
+    //popup
+    let popup=document.getElementById("popup");
+    let set_popup=setInterval(function(){
+        popup.classList.toggle("show");
+        document.getElementById("overlay").classList.toggle("hide")
+        clearInterval(set_popup);
+    },2000);
+    let exit_popup=document.getElementById("popup-exit");
+    exit_popup.addEventListener("click",function(){
+        popup.classList.toggle("show");
+        document.getElementById("overlay").classList.toggle("hide")
+
+    })
     //active slide
     let index=0;
     const pics=document.getElementsByClassName("my-Slides");
@@ -155,3 +177,4 @@ const slide_right=document.getElementById("slide-right");
     slides[prodcut_index_third].classList="slides-side slides-right-place slides-all "
    
   } 
+ 
