@@ -1,0 +1,28 @@
+.popup{
+    height: 30%;
+    width: 30%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+    top: 15px;
+    background-color: #BF0F0F;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+    visibility: hidden;
+    z-index: 123;
+  }
+  .popup-exit{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+  .show{
+    visibility: visible !important;
+  }
+  .hide{
+    filter: blur(7px);
+  }

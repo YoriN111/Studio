@@ -1,0 +1,30 @@
+@import url("../navbar/navbar.css");
+@import url("../slideshow/slide_show.css");
+@import url("../about/about.css");
+@import url("../activity/activity.css");
+@import url("../brands/brands.css");
+@import url("../dvg/dvg.css");
+@import url("../footer/footer.css");
+@import url("../products/products.css");
+@import url("../Picture/picture.css");
+@import url("../darkmode/darkmode.css");
+@import url("../responsivnes/responsivnes.css");
+@import url("../popup/popup.css");
+html,body {
+  height:100%;
+  min-height:100%;
+  max-height:100%;
+  overflow-x: hidden;
+  margin:0px;
+}
+
+@keyframes fadein{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+

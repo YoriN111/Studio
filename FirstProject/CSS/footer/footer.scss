@@ -1,0 +1,144 @@
+@import "../variables/variables.scss";
+
+
+footer {
+	min-height: fit-content;
+	background: url("../../Images/Footer/White-fur-rug-texture-patternpictures-1313\ 1.png");
+	overflow-x: hidden;
+}
+.Footer-Top {
+	display: flex;
+	flex-direction: row;
+	min-height: 196px;
+}
+.Footer-top-place {
+	width: 100%;
+	margin-top: 86px;
+	min-height: 196px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid rgba(255, 255, 255, 0.26);
+}
+.Footer-Logo {
+	img {
+		position: absolute;
+		right: 0;
+		margin-right: 70px;
+	}
+}
+.Footer-Contact {
+	margin-left: 47px;
+	h1 {
+		color: $color_3;
+		font-family: $font-family_1;
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 34px;
+	}
+	a {
+		color: $color_3;
+		font-family: $font-family_2;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 160%;
+	}
+}
+.Footer-Links {
+	justify-content: center;
+	margin-left: 19px;
+	a {
+		color: $color_3;
+		text-align: left;
+		text-decoration: none;
+		font-family: $font-family_3;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 26px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.Contact {
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	img {
+		margin-right: 14px;
+	}
+	display: inline-flex;
+	flex-direction: row;
+}
+.Footer-Social {
+	color: $color_3;
+	text-align: left;
+	font-family: $font-family_2;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+	margin-left: 16px;
+	cursor: pointer;
+	span {
+		svg {
+			&:hover {
+				transform: scale(1.5);
+				transition: 1s;
+			}
+		}
+	}
+}
+.Footer-Bottom {
+	height: 100%;
+	min-height: 68px;
+	background: rgba(0, 0, 0, 0.33);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	small {
+		color: $color_4;
+		text-align: center;
+		font-family: $font-family_2;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 137.99%;
+		letter-spacing: 0.42px;
+	}
+	a {
+		text-decoration: none;
+		color: $color_5;
+		text-align: right;
+		font-family: $font-family_2;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 137.99%;
+		letter-spacing: 0.42px;
+		text-decoration-line: underline;
+	}
+}
+.Footer-Copyright {
+	height: 100%;
+	margin-left: 65px;
+	width: 100%;
+	text-align: left;
+	white-space: nowrap;
+}
+.Footer-Powered {
+	width: 100%;
+	margin-right: 25px;
+	text-align: right;
+}
+.Footer-Personal {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	gap: 30px;
+	justify-content: center;
+}

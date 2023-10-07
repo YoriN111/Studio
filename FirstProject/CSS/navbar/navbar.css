@@ -1,0 +1,155 @@
+.navbar {
+  width: 100%;
+}
+
+.navbar-top {
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #D9D9D9;
+}
+
+.lnr-sun {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.navbar-languages {
+  margin-right: 105px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-languages li {
+  display: inline-block;
+}
+
+.navbar-languages a {
+  margin-left: 15px;
+  color: #595959;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration-line: underline;
+}
+
+.active-language a {
+  color: #888787;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  margin-left: 105px;
+}
+
+.navbar-bottom {
+  padding-left: 105px;
+  padding-right: 105px;
+  height: 63px;
+}
+
+.navbar-bottom-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-bottom-button {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 0.5px solid rgba(136, 135, 135, 0.4);
+  border-right: 0.5px solid rgba(136, 135, 135, 0.4);
+  position: relative;
+}
+
+.navbar-bottom-button:hover {
+  background: #BF0F0F;
+  transition: 0.5s;
+}
+.navbar-bottom-button:hover p, .navbar-bottom-button:hover small {
+  color: #FFF;
+}
+
+.navbar-bottom-button a {
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-bottom-button p {
+  margin: 0px;
+  color: #000;
+  text-align: center;
+  font-family: Roboto Condensed;
+  font-size: 16px;
+  text-wrap: nowrap;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.navbar-bottom-button small {
+  width: 91px;
+  color: #474747;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  text-wrap: nowrap;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.hamburger-line {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+.hamburger {
+  margin-left: 20px;
+  display: none;
+  width: fit-content;
+  float: left;
+  cursor: pointer;
+}
+
+.active-hamburger {
+  position: absolute;
+  left: 0;
+  z-index: 120;
+  background-color: #D9D9D9;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  animation-fill-mode: "forward";
+}
+
+.nav-exit {
+  display: none;
+  width: 100%;
+  margin-right: 30px;
+  text-align: right;
+  cursor: pointer;
+}/*# sourceMappingURL=navbar.css.map */

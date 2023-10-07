@@ -1,0 +1,241 @@
+@keyframes fade_in {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .slides-left {
+    left: -50px;
+  }
+  .slides-right {
+    right: -50px;
+  }
+  .slider {
+    height: 100%;
+  }
+  .container p {
+    margin: 0px;
+  }
+  .navbar-bottom-button {
+    height: fit-content !important;
+  }
+  .navbar-bottom-flex {
+    visibility: hidden;
+  }
+  .navbar-bottom {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+  }
+  .navbar-logo {
+    margin: 0px;
+  }
+  .navbar-languages {
+    margin-right: 20px;
+  }
+  .navbar-languages li {
+    height: 100%;
+  }
+  .slides-side {
+    display: none;
+  }
+  .hamburger {
+    display: block !important;
+  }
+  .About {
+    flex-direction: column;
+  }
+  .Activity-Flex {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+  }
+  .Activity-Card p {
+    white-space: wrap;
+    font-size: 16px;
+  }
+  .DVG-InNumbers {
+    padding-top: 80px;
+  }
+  .DVG-Numbers h2 {
+    font-size: 15px;
+  }
+  .DVG-InNumbers-Bottom p {
+    font-size: 12px;
+    margin: 0px;
+  }
+  .Footer-Top {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Footer-Bottom {
+    flex-direction: column;
+  }
+  .Footer-top-place {
+    margin: 0px;
+    text-align: center;
+    min-height: fit-content;
+  }
+  .Footer-Logo img {
+    position: unset;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+  }
+  .Footer-Logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Footer-top-place a {
+    text-align: center;
+  }
+  .Contact {
+    justify-content: center;
+  }
+  .Footer-Contact {
+    gap: 8px;
+  }
+  .Footer-Links {
+    gap: 8px;
+  }
+  .Footer-Bottom {
+    gap: 8px;
+  }
+  .Footer-Copyright {
+    text-align: center;
+    margin: 0px;
+  }
+  .Footer-Powered {
+    text-align: center;
+    margin: 0px;
+  }
+  footer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    display: flex;
+    padding: 2px 16px;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-bottom-button {
+    height: fit-content !important;
+  }
+  .navbar-bottom-flex {
+    visibility: hidden;
+  }
+  .navbar-bottom {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+  }
+  .navbar-logo {
+    margin: 0px;
+  }
+  .navbar-languages {
+    margin-right: 20px;
+  }
+  .navbar-languages li {
+    height: 100%;
+  }
+  .slides-side {
+    display: none;
+  }
+  .hamburger {
+    display: block !important;
+  }
+  .DVG-InNumbers {
+    padding-top: 80px;
+  }
+  .DVG-Numbers h2 {
+    font-size: 20px;
+    margin: 0px;
+  }
+  .DVG-InNumbers p {
+    font-size: 12px;
+    margin: 0px;
+  }
+  .Footer-Top {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Footer-Bottom {
+    flex-direction: column;
+  }
+  .Footer-top-place {
+    margin: 0px;
+    text-align: center;
+    min-height: fit-content;
+  }
+  .Footer-Logo img {
+    position: unset;
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+  }
+  .Footer-Logo {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .Footer-top-place a {
+    text-align: center;
+  }
+  .Contact {
+    justify-content: center;
+  }
+  .Footer-Contact {
+    gap: 8px;
+  }
+  .Footer-Links {
+    gap: 8px;
+  }
+  .Footer-Bottom {
+    gap: 8px;
+  }
+  .Footer-Copyright {
+    text-align: center;
+    margin: 0px;
+  }
+  .Footer-Powered {
+    text-align: center;
+    margin: 0px;
+  }
+  footer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .About {
+    flex-direction: column;
+  }
+  .Activity-Flex {
+    flex-direction: column;
+  }
+  .Footer-Top {
+    flex-direction: column;
+  }
+  .Footer-Bottom {
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .About-Right-Text {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=responsivnes.css.map */

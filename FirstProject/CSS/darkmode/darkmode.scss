@@ -1,0 +1,32 @@
+@import "../variables/variables.scss";
+.dark-mode h1,.dark-mode p,.dark-mode small,.dark-mode a,.dark-mode span{
+    color: #FFF !important;
+}
+
+.dark-mode .navbar-top{
+    background: $darkmode_red3;
+}
+.dark-mode .navbar-bottom,.dark-mode .active-hamburger{
+    background: $darkmode_black1 !important;
+}
+
+.dark-mode .navbar-bottom-button:hover{
+    background-color: $darkmode_red3 ;
+}
+.dark-mode .Brands,.dark-mode .About,.dark-mode
+{
+    background-color:$darkmode_black2 ;
+}
+.dark-mode .Cointainer,
+.dark-mode .Activity,
+.dark-mode .Products,
+.dark-mode .DVG-InNumbers,.dark-mode .card {
+    background-color:$darkmode_black3 ;
+}
+.dark-mode .slides-left,.dark-mode .slides-right{
+    color: #fff;
+    border: 0px;
+}
+.dark-mode .Brands-Logo path{
+    fill: $darkmode_black2;
+}

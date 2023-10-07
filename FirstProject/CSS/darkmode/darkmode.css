@@ -1,0 +1,35 @@
+.dark-mode h1, .dark-mode p, .dark-mode small, .dark-mode a, .dark-mode span {
+  color: #FFF !important;
+}
+
+.dark-mode .navbar-top {
+  background: #AE0509;
+}
+
+.dark-mode .navbar-bottom, .dark-mode .active-hamburger {
+  background: #403C3E !important;
+}
+
+.dark-mode .navbar-bottom-button:hover {
+  background-color: #AE0509;
+}
+
+.dark-mode .Brands, .dark-mode .About, .dark-mode {
+  background-color: #322F30;
+}
+
+.dark-mode .Cointainer,
+.dark-mode .Activity,
+.dark-mode .Products,
+.dark-mode .DVG-InNumbers, .dark-mode .card {
+  background-color: #292627;
+}
+
+.dark-mode .slides-left, .dark-mode .slides-right {
+  color: #fff;
+  border: 0px;
+}
+
+.dark-mode .Brands-Logo path {
+  fill: #322F30;
+}/*# sourceMappingURL=darkmode.css.map */
